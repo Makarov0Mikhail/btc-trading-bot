@@ -1,0 +1,38 @@
+# Virtual environment
+btc_trading_env/
+venv/
+env/
+.venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Logs
+logs/
+*.log
+
+# IDE
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Secrets / API keys (если есть)
+.env
+*.env
+config.ini
+secrets.json
+
+# Data files (опционально, если большие)
+# data/
+
+# Models (опционально, если большие)
+# models/

@@ -1,0 +1,424 @@
+{
+  "horizon": 10,
+  "timestamp": "20251218_025718",
+  "metrics": {
+    "long_accuracy": 0.8137585845652427,
+    "short_accuracy": 0.81509719473868,
+    "long_precision": 0.5333333333333333,
+    "short_precision": 0.0,
+    "long_recall": 0.002499218994064355,
+    "short_recall": 0.0,
+    "long_f1": 0.004975124378109453,
+    "short_f1": 0.0
+  },
+  "financial": {
+    "pnl": -0.7435613547740472,
+    "sharpe": 2.772934636963291,
+    "max_drawdown": 50.80612555461782
+  },
+  "feature_analysis": {
+    "long_model": {
+      "top_10_features": [
+        {
+          "feature": "atr_pct",
+          "importance": 0.3164863784129847,
+          "mutual_info": 0.006885986153380985,
+          "abs_correlation": 0.03379073157177336
+        },
+        {
+          "feature": "sma_7",
+          "importance": 0.11759891765441638,
+          "mutual_info": 0.0059102928936125565,
+          "abs_correlation": 0.02539152846586131
+        },
+        {
+          "feature": "log_return",
+          "importance": 0.08296414156813169,
+          "mutual_info": 0.005130038371001788,
+          "abs_correlation": 0.020811790498981332
+        },
+        {
+          "feature": "macd_hist",
+          "importance": 0.07905556660992306,
+          "mutual_info": 0.0020950301402946625,
+          "abs_correlation": 0.01442352040791242
+        },
+        {
+          "feature": "log_return_lag_1",
+          "importance": 0.07037907828907003,
+          "mutual_info": 0.0017678592288847828,
+          "abs_correlation": 0.011337432152909534
+        },
+        {
+          "feature": "rsi_14",
+          "importance": 0.06603848491110285,
+          "mutual_info": 0.0022644368235176238,
+          "abs_correlation": 0.03261175198940797
+        },
+        {
+          "feature": "prev_candle_body",
+          "importance": 0.051137743040472895,
+          "mutual_info": 0.005202427755429007,
+          "abs_correlation": 0.0206566766823978
+        },
+        {
+          "feature": "log_return_lag_2",
+          "importance": 0.049087325395256946,
+          "mutual_info": 0.025164023782921374,
+          "abs_correlation": 0.0802374152581831
+        },
+        {
+          "feature": "volume_change_lag_1",
+          "importance": 0.04594662398933187,
+          "mutual_info": 0.021766294967987765,
+          "abs_correlation": 0.16835844815208345
+        },
+        {
+          "feature": "volume_change",
+          "importance": 0.04492554144765002,
+          "mutual_info": 0.0018551321930577735,
+          "abs_correlation": 0.039443166400233654
+        }
+      ],
+      "feature_importance_stats": {
+        "max_importance": 0.3164863784129847,
+        "min_importance": 0.007841196334338248,
+        "mean_importance": 0.07692307692307691
+      }
+    },
+    "short_model": {
+      "top_10_features": [
+        {
+          "feature": "atr_pct",
+          "importance": 0.2154515421482458,
+          "mutual_info": 0.002427000782322164,
+          "abs_correlation": 0.01733702383422339
+        },
+        {
+          "feature": "sma_7",
+          "importance": 0.17362547260881825,
+          "mutual_info": 0.004524722502461165,
+          "abs_correlation": 0.013213051329808908
+        },
+        {
+          "feature": "macd_hist",
+          "importance": 0.08534169826353341,
+          "mutual_info": 0.0013458110370907495,
+          "abs_correlation": 0.008231064365122779
+        },
+        {
+          "feature": "rsi_14",
+          "importance": 0.07405413831427303,
+          "mutual_info": 0.0015907305259468263,
+          "abs_correlation": 0.03538102604065226
+        },
+        {
+          "feature": "log_return_lag_1",
+          "importance": 0.0658319379963281,
+          "mutual_info": 0.004235249202808822,
+          "abs_correlation": 0.03192771408599976
+        },
+        {
+          "feature": "log_return",
+          "importance": 0.06459545757288132,
+          "mutual_info": 0.0,
+          "abs_correlation": 0.01794308490448036
+        },
+        {
+          "feature": "hour_sin",
+          "importance": 0.06266318041354058,
+          "mutual_info": 0.0014214748921621556,
+          "abs_correlation": 0.00836820525468705
+        },
+        {
+          "feature": "log_return_lag_2",
+          "importance": 0.0516816609280277,
+          "mutual_info": 0.02501178506461299,
+          "abs_correlation": 0.09735087894039794
+        },
+        {
+          "feature": "volume_change_lag_1",
+          "importance": 0.049956511665408224,
+          "mutual_info": 0.011564223357459102,
+          "abs_correlation": 0.11134109518928197
+        },
+        {
+          "feature": "volume_change",
+          "importance": 0.048963193100498945,
+          "mutual_info": 0.00147106034900224,
+          "abs_correlation": 0.024851319607993805
+        }
+      ],
+      "feature_importance_stats": {
+        "max_importance": 0.2154515421482458,
+        "min_importance": 0.011572448172989438,
+        "mean_importance": 0.07692307692307691
+      }
+    }
+  },
+  "trades_detailed": {
+    "summary": {
+      "total_trades": 14,
+      "winning_trades": 7,
+      "losing_trades": 7,
+      "win_rate": 0.5,
+      "avg_win_pct": 0.006343922856338129,
+      "avg_loss_pct": -0.0054477578988069,
+      "profit_factor": 0.6938665340590835,
+      "largest_win_pct": 0.010629938856163923,
+      "largest_loss_pct": -0.019478852467624597,
+      "avg_holding_minutes": 8.928571428571429
+    },
+    "by_direction": {
+      "long": {
+        "total_trades": 14,
+        "winning_trades": 7,
+        "losing_trades": 7,
+        "win_rate": 0.5,
+        "avg_win_pct": 0.006343922856338129,
+        "avg_loss_pct": -0.0054477578988069,
+        "profit_factor": 0.6938665340590835,
+        "largest_win_pct": 0.010629938856163923,
+        "largest_loss_pct": -0.019478852467624597,
+        "avg_holding_minutes": 8.928571428571429
+      },
+      "short": {
+        "total_trades": 0,
+        "winning_trades": 0,
+        "losing_trades": 0,
+        "win_rate": 0,
+        "avg_win_pct": 0,
+        "avg_loss_pct": 0,
+        "profit_factor": 0,
+        "largest_win_pct": 0,
+        "largest_loss_pct": 0,
+        "avg_holding_minutes": 0
+      },
+      "total_trades": 14,
+      "long_count": 14,
+      "short_count": 0
+    },
+    "holding_time_stats": {
+      "mean": 8.928571428571429,
+      "median": 10.0,
+      "min": 1.0,
+      "max": 10.0,
+      "std": 2.684992304173214
+    },
+    "exit_reasons": {
+      "HORIZON_EXIT": 12,
+      "STOP_LOSS": 2
+    },
+    "hourly_performance": {
+      "17": {
+        "avg_pnl": 36.892694496048534,
+        "win_rate": 1.0,
+        "total_trades": 1,
+        "total_pnl": 36.892694496048534
+      },
+      "4": {
+        "avg_pnl": 9.935685872932993,
+        "win_rate": 1.0,
+        "total_trades": 1,
+        "total_pnl": 9.935685872932993
+      },
+      "7": {
+        "avg_pnl": -48.03284186472283,
+        "win_rate": 0.0,
+        "total_trades": 3,
+        "total_pnl": -144.0985255941685
+      },
+      "2": {
+        "avg_pnl": 14.82999067524975,
+        "win_rate": 1.0,
+        "total_trades": 1,
+        "total_pnl": 14.82999067524975
+      },
+      "11": {
+        "avg_pnl": -20.414309521410217,
+        "win_rate": 0.0,
+        "total_trades": 1,
+        "total_pnl": -20.414309521410217
+      },
+      "22": {
+        "avg_pnl": 23.110490737363115,
+        "win_rate": 1.0,
+        "total_trades": 1,
+        "total_pnl": 23.110490737363115
+      },
+      "14": {
+        "avg_pnl": 8.066612790660972,
+        "win_rate": 0.6666666666666666,
+        "total_trades": 3,
+        "total_pnl": 24.199838371982917
+      },
+      "0": {
+        "avg_pnl": -30.23240694286148,
+        "win_rate": 0.0,
+        "total_trades": 1,
+        "total_pnl": -30.23240694286148
+      },
+      "15": {
+        "avg_pnl": 45.18237126168169,
+        "win_rate": 1.0,
+        "total_trades": 1,
+        "total_pnl": 45.18237126168169
+      },
+      "16": {
+        "avg_pnl": -33.76196483422505,
+        "win_rate": 0.0,
+        "total_trades": 1,
+        "total_pnl": -33.76196483422505
+      }
+    },
+    "confidence_quartiles": {
+      "Q1": {
+        "avg_pnl": -14.137530762115123,
+        "win_rate": 0.25,
+        "avg_confidence": 0.16021227596996046,
+        "trades": 4
+      },
+      "Q2": {
+        "avg_pnl": 1.9739384246157645,
+        "win_rate": 0.6666666666666666,
+        "avg_confidence": 0.18111460631323292,
+        "trades": 3
+      },
+      "Q3": {
+        "avg_pnl": -15.077407677232209,
+        "win_rate": 0.6666666666666666,
+        "avg_confidence": 0.20930532314473008,
+        "trades": 3
+      },
+      "Q4": {
+        "avg_pnl": 5.3760988322258925,
+        "win_rate": 0.5,
+        "avg_confidence": 0.25937376166432474,
+        "trades": 4
+      }
+    }
+  },
+  "threshold_sensitivity": [
+    {
+      "threshold": 0.3,
+      "total_signals": 2424,
+      "long_signals": 1177,
+      "short_signals": 1247,
+      "signal_ratio": 0.14107787219182866,
+      "accuracy": 0.5403329065300896
+    },
+    {
+      "threshold": 0.35,
+      "total_signals": 4110,
+      "long_signals": 2195,
+      "short_signals": 1915,
+      "signal_ratio": 0.2392038179490164,
+      "accuracy": 0.5076242579443604
+    },
+    {
+      "threshold": 0.39999999999999997,
+      "total_signals": 5194,
+      "long_signals": 2407,
+      "short_signals": 2787,
+      "signal_ratio": 0.30229309742754046,
+      "accuracy": 0.5141427074845769
+    },
+    {
+      "threshold": 0.44999999999999996,
+      "total_signals": 4688,
+      "long_signals": 1722,
+      "short_signals": 2966,
+      "signal_ratio": 0.27284367361191947,
+      "accuracy": 0.5630310790362006
+    },
+    {
+      "threshold": 0.49999999999999994,
+      "total_signals": 3085,
+      "long_signals": 976,
+      "short_signals": 2109,
+      "signal_ratio": 0.1795483645675707,
+      "accuracy": 0.6104644395297404
+    },
+    {
+      "threshold": 0.5499999999999999,
+      "total_signals": 2361,
+      "long_signals": 524,
+      "short_signals": 1837,
+      "signal_ratio": 0.13741124432545687,
+      "accuracy": 0.6335118146897917
+    },
+    {
+      "threshold": 0.5999999999999999,
+      "total_signals": 886,
+      "long_signals": 302,
+      "short_signals": 584,
+      "signal_ratio": 0.05156559189849843,
+      "accuracy": 0.6384588522872774
+    },
+    {
+      "threshold": 0.6499999999999999,
+      "total_signals": 88,
+      "long_signals": 71,
+      "short_signals": 17,
+      "signal_ratio": 0.005121638924455826,
+      "accuracy": 0.6305435921313002
+    },
+    {
+      "threshold": 0.7,
+      "total_signals": 5,
+      "long_signals": 4,
+      "short_signals": 1,
+      "signal_ratio": 0.0002910022116168083,
+      "accuracy": 0.6289721801885695
+    },
+    {
+      "threshold": 0.7499999999999999,
+      "total_signals": 1,
+      "long_signals": 1,
+      "short_signals": 0,
+      "signal_ratio": 5.820044232336166e-05,
+      "accuracy": 0.6288557793039227
+    },
+    {
+      "threshold": 0.7999999999999998,
+      "total_signals": 0,
+      "long_signals": 0,
+      "short_signals": 0,
+      "signal_ratio": 0.0,
+      "accuracy": 0.6287975788615994
+    }
+  ],
+  "best_params": {
+    "n_estimators": 132,
+    "max_depth": 11,
+    "min_samples_split": 27,
+    "min_samples_leaf": 16,
+    "thr_long": 0.6393457731974994,
+    "thr_short": 0.7055390295327606,
+    "min_confidence": 0.15616312671118687,
+    "stop_mult": 0.8874009284838286,
+    "take_mult": 2.1477009392087147,
+    "trailing_mult": 0.723147458273607,
+    "breakeven_mult": 0.40375113659351813
+  },
+  "config": {
+    "session_config": {
+      "prebuffer_min": 45,
+      "session_len_min": 45,
+      "volatility_window": 10,
+      "zscore_window_days": 3,
+      "volatility_threshold": 1.8,
+      "cooldown_min": 30
+    },
+    "sim_config": {
+      "commission": 0.001,
+      "spread_pct": 0.0002,
+      "risk_per_trade": 0.2,
+      "max_position_pct": 0.5,
+      "default_stop_pct": 0.005,
+      "default_take_pct": 0.015,
+      "max_hold_minutes": 30,
+      "min_hold_bars": 3
+    }
+  }
+}

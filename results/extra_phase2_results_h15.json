@@ -1,0 +1,117 @@
+{
+  "model": "Pipeline",
+  "best_params": {
+    "n_estimators": 100,
+    "max_depth": 5,
+    "min_samples_split": 69,
+    "min_samples_leaf": 9,
+    "max_features": "log2",
+    "bootstrap": true,
+    "sl_atr_mult": 1.7307687295932146,
+    "tp_atr_mult": 2.4343670326764206,
+    "max_hold_days": 12,
+    "stop_loss_pct": 0.022735297961027988,
+    "take_profit_pct": 0.059622244148315996,
+    "min_trades_thr": 21,
+    "proba_step": 0.013586533346386483,
+    "ret_step": 0.0016306700383555994,
+    "ret_min": 0.003087250120116382,
+    "ret_max": 0.006103027441167219,
+    "atr_col": "atr_21",
+    "bag_n_estimators": 150,
+    "bag_max_samples": 0.5887058563549197,
+    "bag_max_features": 0.9927051608746587,
+    "logreg_C": 4.5589863145576155,
+    "weight_pnl": 0.44655965528526625,
+    "pnl_scale": 75.2454993540539
+  },
+  "rf_params": {
+    "n_estimators": 100,
+    "max_depth": 5,
+    "min_samples_split": 69,
+    "min_samples_leaf": 9,
+    "max_features": "log2",
+    "bootstrap": true,
+    "random_state": 42,
+    "n_jobs": -1,
+    "class_weight": "balanced"
+  },
+  "trade_params": {
+    "stop_loss": 0.03,
+    "take_profit": 0.05,
+    "max_hold_days": 12,
+    "atr_col": "atr_14",
+    "sl_atr_mult": 1.7307687295932146,
+    "tp_atr_mult": 2.4343670326764206
+  },
+  "features_used": [
+    "returns",
+    "log_returns",
+    "sma_ratio",
+    "sma_7",
+    "sma_21",
+    "logret_std_1",
+    "logret_std_7",
+    "logret_std_14",
+    "logret_std_21",
+    "logret_std_28",
+    "logret_mean_7",
+    "logret_cum_7",
+    "logret_skew_14",
+    "logret_kurt_14",
+    "atr_14",
+    "atr_pct",
+    "atr_pct_7",
+    "atr_pct_21",
+    "range_pct",
+    "range_vol_14",
+    "body_pct",
+    "upper_wick_pct",
+    "lower_wick_pct",
+    "volume_ratio",
+    "log_volume_diff",
+    "obv_delta",
+    "macd",
+    "macd_signal",
+    "macd_hist",
+    "rsi_14",
+    "hour_sin",
+    "hour_cos"
+  ],
+  "target_horizon": 15,
+  "metrics": {
+    "train": {
+      "train_accuracy": 0.9797830379021515,
+      "train_precision": 0.14944880850221137,
+      "train_recall": 0.1777638190954774,
+      "train_f1": 0.1623812085350547,
+      "train_roc_auc": 0.829721975477397
+    },
+    "validation": {
+      "val_best_accuracy": 0.9961721104380384,
+      "val_best_precision": 0.16666666666666666,
+      "val_best_recall": 0.02159827213822894,
+      "val_best_f1": 0.03824091778202677,
+      "val_best_roc_auc": 0.9143224497775968
+    },
+    "test": {
+      "test_accuracy": 0.9962279719455414,
+      "test_precision": 0.15217391304347827,
+      "test_recall": 0.03125,
+      "test_f1": 0.05185185185185185,
+      "test_roc_auc": 0.918988235151254
+    }
+  },
+  "trading_results": {
+    "pnl_test": -0.29590722174429596,
+    "final_capital": 9970.40927782557,
+    "num_trades": 21,
+    "max_drawdown": 2.1815929756068364
+  },
+  "horizon_analysis": [],
+  "metadata": {
+    "created_date": "2025-12-12T19:06:29.602669",
+    "phase": 2,
+    "data_version": "2025-12-12T01:48:37.412877"
+  }
+}

@@ -1,0 +1,2 @@
+horizon,timestamp,pnl,sharpe,max_drawdown,total_trades,win_rate,profit_factor,long_accuracy,short_accuracy,long_trades,short_trades
+15,20251219_205323,1.948778830461717,5.653985417756267,67.06950032472402,64,0.609375,1.3181761155741332,0.8533152909336942,0.8577807848443844,53,11

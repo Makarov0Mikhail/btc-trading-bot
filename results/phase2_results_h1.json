@@ -1,0 +1,134 @@
+{
+  "model": "RandomForestClassifier",
+  "best_params": {
+    "n_estimators": 112,
+    "max_depth": 9,
+    "min_samples_split": 69,
+    "min_samples_leaf": 12,
+    "max_features": "sqrt",
+    "bootstrap": true,
+    "sl_atr_mult": 2.1445507506438357,
+    "tp_atr_mult": 4.897971635693252,
+    "max_hold_days": 14
+  },
+  "rf_params": {
+    "n_estimators": 112,
+    "max_depth": 9,
+    "min_samples_split": 69,
+    "min_samples_leaf": 12,
+    "max_features": "sqrt",
+    "bootstrap": true,
+    "random_state": 42,
+    "n_jobs": -1,
+    "class_weight": "balanced"
+  },
+  "trade_params": {
+    "stop_loss": 0.03,
+    "take_profit": 0.05,
+    "max_hold_days": 14,
+    "atr_col": "atr_14",
+    "sl_atr_mult": 2.1445507506438357,
+    "tp_atr_mult": 4.897971635693252
+  },
+  "features_used": [
+    "returns",
+    "log_returns",
+    "logret_zscore_21",
+    "volume_billion",
+    "volume_sma_5",
+    "volume_sma_20",
+    "volume_ratio",
+    "log_volume",
+    "log_volume_diff",
+    "sma_7",
+    "sma_21",
+    "sma_ratio",
+    "rsi_14",
+    "atr_14",
+    "atr_pct",
+    "macd",
+    "macd_signal",
+    "macd_hist",
+    "range_pct",
+    "body_pct",
+    "upper_wick_pct",
+    "lower_wick_pct",
+    "range_vol_14",
+    "logret_mean_7",
+    "logret_mean_21",
+    "logret_std_7",
+    "logret_cum_7"
+  ],
+  "target_horizon": 1,
+  "metrics": {
+    "train": {
+      "train_accuracy": 0.7040343757460015,
+      "train_precision": 0.634978229317852,
+      "train_recall": 0.2520524269047962,
+      "train_f1": 0.36086194453036397,
+      "train_roc_auc": 0.7088904276406018
+    },
+    "validation": {
+      "val_best_accuracy": 0.7467545436389055,
+      "val_best_precision": 0.6636363636363637,
+      "val_best_recall": 0.10895522388059702,
+      "val_best_f1": 0.18717948717948718,
+      "val_best_roc_auc": 0.5750167895184563
+    },
+    "test": {
+      "test_accuracy": 0.6896964856230032,
+      "test_precision": 0.32653061224489793,
+      "test_recall": 0.14222222222222222,
+      "test_f1": 0.19814241486068113,
+      "test_roc_auc": 0.5309819168539781
+    }
+  },
+  "trading_results": {
+    "pnl_test": -16.40786645804636,
+    "final_capital": 8359.213354195364,
+    "num_trades": 55,
+    "max_drawdown": 17.329102354146546
+  },
+  "horizon_analysis": [
+    {
+      "horizon": 1,
+      "f1": 0.28493150684931506,
+      "accuracy": 0.6872378669862192,
+      "pnl": -22.10100791145486,
+      "trades": 124
+    },
+    {
+      "horizon": 7,
+      "f1": 0.36513470681458005,
+      "accuracy": 0.5999600559217096,
+      "pnl": -19.88646892605391,
+      "trades": 135
+    },
+    {
+      "horizon": 14,
+      "f1": 0.3917832688300089,
+      "accuracy": 0.5919712402636309,
+      "pnl": -41.92945854787303,
+      "trades": 145
+    },
+    {
+      "horizon": 21,
+      "f1": 0.36020076764098025,
+      "accuracy": 0.567205911723587,
+      "pnl": -10.924871246657442,
+      "trades": 109
+    },
+    {
+      "horizon": 28,
+      "f1": 0.3211720769893709,
+      "accuracy": 0.5280607149990014,
+      "pnl": -11.586263443842949,
+      "trades": 106
+    }
+  ],
+  "metadata": {
+    "created_date": "2025-12-10T21:58:51.280636",
+    "phase": 2,
+    "data_version": "2025-12-10T21:12:59.751211"
+  }
+}

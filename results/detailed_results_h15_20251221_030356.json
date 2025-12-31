@@ -1,0 +1,853 @@
+{
+  "horizon": 15,
+  "timestamp": "20251221_030356",
+  "metrics": {
+    "long_accuracy": 0.854127198917456,
+    "short_accuracy": 0.857916102841678,
+    "long_precision": 0.4107142857142857,
+    "short_precision": 0.42857142857142855,
+    "long_recall": 0.010717614165890028,
+    "short_recall": 0.0014292520247737017,
+    "long_f1": 0.02089009990917348,
+    "short_f1": 0.002849002849002849
+  },
+  "financial": {
+    "pnl": 1.5848562897673668,
+    "sharpe": 4.019060500611842,
+    "max_drawdown": 66.91291447260568
+  },
+  "feature_analysis": {
+    "long_model": {
+      "top_10_features": [
+        {
+          "feature": "atr_pct",
+          "importance": 0.38498110149041576,
+          "mutual_info": 0.007056689051307075,
+          "abs_correlation": 0.023735262516078187
+        },
+        {
+          "feature": "macd_hist",
+          "importance": 0.10631862806578028,
+          "mutual_info": 0.006713849755652257,
+          "abs_correlation": 0.01773014041611684
+        },
+        {
+          "feature": "log_return",
+          "importance": 0.1023339363920882,
+          "mutual_info": 0.0020137820157954955,
+          "abs_correlation": 0.016323330226594747
+        },
+        {
+          "feature": "rsi_14",
+          "importance": 0.07702435366136673,
+          "mutual_info": 0.0003579442470220684,
+          "abs_correlation": 0.0023432960029551187
+        },
+        {
+          "feature": "prev_candle_body",
+          "importance": 0.0627680130673085,
+          "mutual_info": 0.0024918177313073553,
+          "abs_correlation": 0.03685416733842849
+        },
+        {
+          "feature": "log_return_lag_2",
+          "importance": 0.062185611807568486,
+          "mutual_info": 0.006902293024725781,
+          "abs_correlation": 0.0175271903051269
+        },
+        {
+          "feature": "volume_change_lag_1",
+          "importance": 0.054062564548094404,
+          "mutual_info": 0.00026148616061605345,
+          "abs_correlation": 0.011292463849302567
+        },
+        {
+          "feature": "volume_change",
+          "importance": 0.051545719729720496,
+          "mutual_info": 0.0,
+          "abs_correlation": 0.006575303591907652
+        },
+        {
+          "feature": "hour_sin",
+          "importance": 0.04500545017651145,
+          "mutual_info": 0.023240954394492697,
+          "abs_correlation": 0.18583830594453596
+        },
+        {
+          "feature": "hour_cos",
+          "importance": 0.03993523419358675,
+          "mutual_info": 0.0026220285163252033,
+          "abs_correlation": 0.03604354412282884
+        }
+      ],
+      "feature_importance_stats": {
+        "max_importance": 0.38498110149041576,
+        "min_importance": 0.013839386867558829,
+        "mean_importance": 0.09090909090909091
+      }
+    },
+    "short_model": {
+      "top_10_features": [
+        {
+          "feature": "atr_pct",
+          "importance": 0.29856807801026974,
+          "mutual_info": 0.0028237643032689164,
+          "abs_correlation": 0.013825149762860318
+        },
+        {
+          "feature": "macd_hist",
+          "importance": 0.10952124895252334,
+          "mutual_info": 0.00015898117132784328,
+          "abs_correlation": 0.010709684562613573
+        },
+        {
+          "feature": "rsi_14",
+          "importance": 0.08788124801173837,
+          "mutual_info": 0.0024398385795336708,
+          "abs_correlation": 0.03627178075543437
+        },
+        {
+          "feature": "hour_sin",
+          "importance": 0.08380096433247243,
+          "mutual_info": 0.0007099767019780323,
+          "abs_correlation": 0.02512950235997667
+        },
+        {
+          "feature": "log_return",
+          "importance": 0.0836630573857015,
+          "mutual_info": 0.0,
+          "abs_correlation": 0.01997639702800051
+        },
+        {
+          "feature": "volume_change_lag_1",
+          "importance": 0.06676509849287035,
+          "mutual_info": 3.3397212902075424e-05,
+          "abs_correlation": 0.010849411935739317
+        },
+        {
+          "feature": "log_return_lag_2",
+          "importance": 0.0659905955929696,
+          "mutual_info": 0.0,
+          "abs_correlation": 0.000317206559050915
+        },
+        {
+          "feature": "hour_cos",
+          "importance": 0.0636602442037569,
+          "mutual_info": 0.001342184344048869,
+          "abs_correlation": 0.006554500697066211
+        },
+        {
+          "feature": "prev_candle_body",
+          "importance": 0.06121793338181214,
+          "mutual_info": 0.010899081896031504,
+          "abs_correlation": 0.11019698436232978
+        },
+        {
+          "feature": "volume_change",
+          "importance": 0.059629030087041734,
+          "mutual_info": 0.002625190256781984,
+          "abs_correlation": 0.01894983190218393
+        }
+      ],
+      "feature_importance_stats": {
+        "max_importance": 0.29856807801026974,
+        "min_importance": 0.019302501548843953,
+        "mean_importance": 0.09090909090909091
+      }
+    }
+  },
+  "trades_detailed": {
+    "summary": {
+      "total_trades": 32,
+      "winning_trades": 17,
+      "losing_trades": 15,
+      "win_rate": 0.53125,
+      "avg_win_pct": 0.006649887663701481,
+      "avg_loss_pct": -0.0022124901455314056,
+      "profit_factor": 1.5663834990555823,
+      "largest_win_pct": 0.01431644132271681,
+      "largest_loss_pct": -0.005165011560057331,
+      "avg_holding_minutes": 8.875
+    },
+    "by_direction": {
+      "long": {
+        "total_trades": 27,
+        "winning_trades": 15,
+        "losing_trades": 12,
+        "win_rate": 0.5555555555555556,
+        "avg_win_pct": 0.006690291946047037,
+        "avg_loss_pct": -0.0018766663564540875,
+        "profit_factor": 1.9154188755901638,
+        "largest_win_pct": 0.01431644132271681,
+        "largest_loss_pct": -0.004278972312723228,
+        "avg_holding_minutes": 9.481481481481481
+      },
+      "short": {
+        "total_trades": 5,
+        "winning_trades": 2,
+        "losing_trades": 3,
+        "win_rate": 0.4,
+        "avg_win_pct": 0.006346855546109809,
+        "avg_loss_pct": -0.0035557853018406784,
+        "profit_factor": 0.6359300263967121,
+        "largest_win_pct": 0.006447865722751356,
+        "largest_loss_pct": -0.005165011560057331,
+        "avg_holding_minutes": 5.6
+      },
+      "total_trades": 32,
+      "long_count": 27,
+      "short_count": 5
+    },
+    "trades_list": [
+      {
+        "entry_time": "2025-09-22 06:16:00",
+        "exit_time": "2025-09-22 06:31:00",
+        "direction": "LONG",
+        "entry_price": 113094.20829,
+        "exit_price": 112693.12956,
+        "pnl_pct": -0.0034467573175847033,
+        "pnl_usd": -24.702359113637932,
+        "exit_reason": "HORIZON_EXIT",
+        "holding_time_minutes": 15.0,
+        "confidence": 0.1793481993729265
+      },
+      {
+        "entry_time": "2025-10-03 17:00:00",
+        "exit_time": "2025-10-03 17:09:00",
+        "direction": "LONG",
+        "entry_price": 121817.58054,
+        "exit_price": 122682.63051,
+        "pnl_pct": 0.007201911711847808,
+        "pnl_usd": 28.39087477622246,
+        "exit_reason": "TAKE_PROFIT",
+        "holding_time_minutes": 9.0,
+        "confidence": 0.34464033147192247
+      },
+      {
+        "entry_time": "2025-10-05 09:42:00",
+        "exit_time": "2025-10-05 09:57:00",
+        "direction": "LONG",
+        "entry_price": 123136.51242,
+        "exit_price": 123043.79439000001,
+        "pnl_pct": -0.0006530347369732015,
+        "pnl_usd": -10.758650377884663,
+        "exit_reason": "HORIZON_EXIT",
+        "holding_time_minutes": 15.0,
+        "confidence": 0.18294296307825414
+      },
+      {
+        "entry_time": "2025-10-11 20:56:00",
+        "exit_time": "2025-10-11 21:01:00",
+        "direction": "LONG",
+        "entry_price": 109629.86189,
+        "exit_price": 110271.27177,
+        "pnl_pct": 0.005951280962614325,
+        "pnl_usd": 22.201691591640923,
+        "exit_reason": "TAKE_PROFIT",
+        "holding_time_minutes": 5.0,
+        "confidence": 0.2428808862299368
+      },
+      {
+        "entry_time": "2025-10-14 19:42:00",
+        "exit_time": "2025-10-14 19:46:00",
+        "direction": "SHORT",
+        "entry_price": 112434.05547,
+        "exit_price": 112545.45341999999,
+        "pnl_pct": -0.0008899030694667909,
+        "pnl_usd": -11.967108025583748,
+        "exit_reason": "STOP_LOSS",
+        "holding_time_minutes": 4.0,
+        "confidence": -0.1827733992064664
+      },
+      {
+        "entry_time": "2025-10-17 06:48:00",
+        "exit_time": "2025-10-17 06:55:00",
+        "direction": "LONG",
+        "entry_price": 106761.97513,
+        "exit_price": 106722.52668,
+        "pnl_pct": -0.00026952601771346174,
+        "pnl_usd": -8.842811446218297,
+        "exit_reason": "STOP_LOSS",
+        "holding_time_minutes": 7.0,
+        "confidence": 0.2701270048680391
+      },
+      {
+        "entry_time": "2025-10-17 08:16:00",
+        "exit_time": "2025-10-17 08:25:00",
+        "direction": "LONG",
+        "entry_price": 104515.65052,
+        "exit_price": 105269.67198,
+        "pnl_pct": 0.007315167405035572,
+        "pnl_usd": 29.010127926850604,
+        "exit_reason": "TAKE_PROFIT",
+        "holding_time_minutes": 9.0,
+        "confidence": 0.19235716643035067
+      },
+      {
+        "entry_time": "2025-10-17 10:23:00",
+        "exit_time": "2025-10-17 10:36:00",
+        "direction": "LONG",
+        "entry_price": 103621.3611,
+        "exit_price": 104298.06915,
+        "pnl_pct": 0.006631247579703903,
+        "pnl_usd": 25.67189436981406,
+        "exit_reason": "TAKE_PROFIT",
+        "holding_time_minutes": 13.0,
+        "confidence": 0.18741711466258854
+      },
+      {
+        "entry_time": "2025-10-21 22:31:00",
+        "exit_time": "2025-10-21 22:33:00",
+        "direction": "LONG",
+        "entry_price": 108106.8096,
+        "exit_price": 109036.59525,
+        "pnl_pct": 0.008701490715345317,
+        "pnl_usd": 36.123994731349605,
+        "exit_reason": "TAKE_PROFIT",
+        "holding_time_minutes": 2.0,
+        "confidence": 0.2600085024825452
+      },
+      {
+        "entry_time": "2025-10-21 22:42:00",
+        "exit_time": "2025-10-21 22:57:00",
+        "direction": "LONG",
+        "entry_price": 109084.80738999999,
+        "exit_price": 108979.20099000001,
+        "pnl_pct": -0.000868199635366107,
+        "pnl_usd": -11.929592067804096,
+        "exit_reason": "HORIZON_EXIT",
+        "holding_time_minutes": 15.0,
+        "confidence": 0.1690972286316172
+      },
+      {
+        "entry_time": "2025-10-23 06:25:00",
+        "exit_time": "2025-10-23 06:40:00",
+        "direction": "LONG",
+        "entry_price": 110024.30133,
+        "exit_price": 109906.0083,
+        "pnl_pct": -0.000975251182719794,
+        "pnl_usd": -12.453848237627478,
+        "exit_reason": "HORIZON_EXIT",
+        "holding_time_minutes": 15.0,
+        "confidence": 0.34925351602673577
+      },
+      {
+        "entry_time": "2025-10-30 04:28:00",
+        "exit_time": "2025-10-30 04:31:00",
+        "direction": "LONG",
+        "entry_price": 108003.39926,
+        "exit_price": 107928.60605999999,
+        "pnl_pct": -0.0005925670899111779,
+        "pnl_usd": -10.51629313229802,
+        "exit_reason": "STOP_LOSS",
+        "holding_time_minutes": 3.0,
+        "confidence": 0.17057583315368374
+      },
+      {
+        "entry_time": "2025-11-05 01:54:00",
+        "exit_time": "2025-11-05 02:00:00",
+        "direction": "SHORT",
+        "entry_price": 100599.83901,
+        "exit_price": 101076.1066,
+        "pnl_pct": -0.004612441275997914,
+        "pnl_usd": -30.820524117787897,
+        "exit_reason": "STOP_LOSS",
+        "holding_time_minutes": 6.0,
+        "confidence": -0.1996296437049485
+      },
+      {
+        "entry_time": "2025-11-14 00:15:00",
+        "exit_time": "2025-11-14 00:28:00",
+        "direction": "LONG",
+        "entry_price": 98889.38795,
+        "exit_price": 99468.95211,
+        "pnl_pct": 0.0059613277240431195,
+        "pnl_usd": 22.310773638873854,
+        "exit_reason": "TAKE_PROFIT",
+        "holding_time_minutes": 13.0,
+        "confidence": 0.1725283382595682
+      },
+      {
+        "entry_time": "2025-11-14 04:34:00",
+        "exit_time": "2025-11-14 04:38:00",
+        "direction": "LONG",
+        "entry_price": 97680.06703,
+        "exit_price": 97280.87094000001,
+        "pnl_pct": -0.003987169970720683,
+        "pnl_usd": -27.514681649031704,
+        "exit_reason": "STOP_LOSS",
+        "holding_time_minutes": 4.0,
+        "confidence": 0.18749022179121194
+      },
+      {
+        "entry_time": "2025-11-14 04:41:00",
+        "exit_time": "2025-11-14 04:45:00",
+        "direction": "LONG",
+        "entry_price": 97030.00203,
+        "exit_price": 97866.31239,
+        "pnl_pct": 0.00871996240645645,
+        "pnl_usd": 36.09124664971984,
+        "exit_reason": "TAKE_PROFIT",
+        "holding_time_minutes": 4.0,
+        "confidence": 0.1891899572974114
+      },
+      {
+        "entry_time": "2025-11-14 06:46:00",
+        "exit_time": "2025-11-14 06:48:00",
+        "direction": "LONG",
+        "entry_price": 96506.74971,
+        "exit_price": 96084.19062000001,
+        "pnl_pct": -0.004278972312723228,
+        "pnl_usd": -29.002333643771593,
+        "exit_reason": "STOP_LOSS",
+        "holding_time_minutes": 2.0,
+        "confidence": 0.2535385410702119
+      },
+      {
+        "entry_time": "2025-11-14 06:57:00",
+        "exit_time": "2025-11-14 07:06:00",
+        "direction": "LONG",
+        "entry_price": 97159.81501,
+        "exit_price": 96994.49958,
+        "pnl_pct": -0.0016016396283174972,
+        "pnl_usd": -15.523581929870293,
+        "exit_reason": "STOP_LOSS",
+        "holding_time_minutes": 9.0,
+        "confidence": 0.2493261865949309
+      },
+      {
+        "entry_time": "2025-11-18 02:16:00",
+        "exit_time": "2025-11-18 02:27:00",
+        "direction": "LONG",
+        "entry_price": 90901.58925,
+        "exit_price": 91405.35855,
+        "pnl_pct": 0.005642483857893454,
+        "pnl_usd": 20.687655774468382,
+        "exit_reason": "TAKE_PROFIT",
+        "holding_time_minutes": 11.0,
+        "confidence": 0.28645400708446467
+      },
+      {
+        "entry_time": "2025-11-18 04:53:00",
+        "exit_time": "2025-11-18 04:56:00",
+        "direction": "SHORT",
+        "entry_price": 89457.25338,
+        "exit_price": 89930.69217,
+        "pnl_pct": -0.005165011560057331,
+        "pnl_usd": -33.54535138244737,
+        "exit_reason": "STOP_LOSS",
+        "holding_time_minutes": 3.0,
+        "confidence": -0.17951473801787804
+      },
+      {
+        "entry_time": "2025-11-18 05:01:00",
+        "exit_time": "2025-11-18 05:16:00",
+        "direction": "LONG",
+        "entry_price": 89906.28973,
+        "exit_price": 90250.974,
+        "pnl_pct": 0.003934210510323943,
+        "pnl_usd": 12.138553098123504,
+        "exit_reason": "HORIZON_EXIT",
+        "holding_time_minutes": 15.0,
+        "confidence": 0.3892372014272486
+      },
+      {
+        "entry_time": "2025-11-21 02:18:00",
+        "exit_time": "2025-11-21 02:21:00",
+        "direction": "LONG",
+        "entry_price": 86150.6142,
+        "exit_price": 86687.3304,
+        "pnl_pct": 0.006330608377717262,
+        "pnl_usd": 24.123369210243265,
+        "exit_reason": "TAKE_PROFIT",
+        "holding_time_minutes": 3.0,
+        "confidence": 0.2663115506632966
+      },
+      {
+        "entry_time": "2025-11-21 07:33:00",
+        "exit_time": "2025-11-21 07:41:00",
+        "direction": "LONG",
+        "entry_price": 83155.11468,
+        "exit_price": 84337.16544000001,
+        "pnl_pct": 0.01431644132271681,
+        "pnl_usd": 64.16716014119376,
+        "exit_reason": "TAKE_PROFIT",
+        "holding_time_minutes": 8.0,
+        "confidence": 0.20673620802351445
+      },
+      {
+        "entry_time": "2025-11-21 07:44:00",
+        "exit_time": "2025-11-21 07:59:00",
+        "direction": "LONG",
+        "entry_price": 84319.23108,
+        "exit_price": 83991.69999000001,
+        "pnl_pct": -0.0037847958990187003,
+        "pnl_usd": -26.636343602672156,
+        "exit_reason": "HORIZON_EXIT",
+        "holding_time_minutes": 15.0,
+        "confidence": 0.24276092473015165
+      },
+      {
+        "entry_time": "2025-11-21 18:14:00",
+        "exit_time": "2025-11-21 18:29:00",
+        "direction": "LONG",
+        "entry_price": 83644.66363,
+        "exit_price": 84013.39782,
+        "pnl_pct": 0.004508791758291553,
+        "pnl_usd": 15.115925115444195,
+        "exit_reason": "HORIZON_EXIT",
+        "holding_time_minutes": 15.0,
+        "confidence": 0.17680840531296982
+      },
+      {
+        "entry_time": "2025-12-01 00:13:00",
+        "exit_time": "2025-12-01 00:23:00",
+        "direction": "SHORT",
+        "entry_price": 88931.70594,
+        "exit_price": 88388.53796999999,
+        "pnl_pct": 0.006245845369468261,
+        "pnl_usd": 23.73601622036151,
+        "exit_reason": "TAKE_PROFIT",
+        "holding_time_minutes": 10.0,
+        "confidence": -0.18989698414834877
+      },
+      {
+        "entry_time": "2025-12-01 15:42:00",
+        "exit_time": "2025-12-01 15:50:00",
+        "direction": "LONG",
+        "entry_price": 83952.09436999999,
+        "exit_price": 84537.74538,
+        "pnl_pct": 0.007076721962189669,
+        "pnl_usd": 28.129997013653792,
+        "exit_reason": "TAKE_PROFIT",
+        "holding_time_minutes": 8.0,
+        "confidence": 0.17629884983295052
+      },
+      {
+        "entry_time": "2025-12-05 16:08:00",
+        "exit_time": "2025-12-05 16:23:00",
+        "direction": "LONG",
+        "entry_price": 89314.73058,
+        "exit_price": 89152.68384000001,
+        "pnl_pct": -0.0017145053117842979,
+        "pnl_usd": -16.268701553242668,
+        "exit_reason": "HORIZON_EXIT",
+        "holding_time_minutes": 15.0,
+        "confidence": 0.17512737481573282
+      },
+      {
+        "entry_time": "2025-12-07 22:06:00",
+        "exit_time": "2025-12-07 22:21:00",
+        "direction": "LONG",
+        "entry_price": 89215.82069,
+        "exit_price": 89342.96480999999,
+        "pnl_pct": 0.0015252822755824624,
+        "pnl_usd": 0.12199215207020675,
+        "exit_reason": "HORIZON_EXIT",
+        "holding_time_minutes": 15.0,
+        "confidence": 0.1952216345929942
+      },
+      {
+        "entry_time": "2025-12-09 17:23:00",
+        "exit_time": "2025-12-09 17:32:00",
+        "direction": "LONG",
+        "entry_price": 93704.3695,
+        "exit_price": 93662.43282,
+        "pnl_pct": -0.0003475771746161982,
+        "pnl_usd": -9.338169785056818,
+        "exit_reason": "STOP_LOSS",
+        "holding_time_minutes": 9.0,
+        "confidence": 0.2252101214876603
+      },
+      {
+        "entry_time": "2025-12-10 20:14:00",
+        "exit_time": "2025-12-10 20:19:00",
+        "direction": "SHORT",
+        "entry_price": 94227.87627000001,
+        "exit_price": 93633.56242,
+        "pnl_pct": 0.006447865722751356,
+        "pnl_usd": 24.80642000815237,
+        "exit_reason": "TAKE_PROFIT",
+        "holding_time_minutes": 5.0,
+        "confidence": -0.18606380819242685
+      },
+      {
+        "entry_time": "2025-12-15 15:03:00",
+        "exit_time": "2025-12-15 15:05:00",
+        "direction": "LONG",
+        "entry_price": 87443.34346,
+        "exit_price": 88006.1985,
+        "pnl_pct": 0.006537450620943908,
+        "pnl_usd": 25.47828662348805,
+        "exit_reason": "TAKE_PROFIT",
+        "holding_time_minutes": 2.0,
+        "confidence": 0.16868503896452125
+      }
+    ],
+    "holding_time_stats": {
+      "mean": 8.875,
+      "median": 9.0,
+      "min": 2.0,
+      "max": 15.0,
+      "std": 4.80071609241788
+    },
+    "exit_reasons": {
+      "HORIZON_EXIT": 9,
+      "TAKE_PROFIT": 14,
+      "STOP_LOSS": 9
+    },
+    "hourly_performance": {
+      "6": {
+        "avg_pnl": -18.10498687422512,
+        "win_rate": 0.0,
+        "total_trades": 5,
+        "total_pnl": -90.5249343711256
+      },
+      "17": {
+        "avg_pnl": 9.52635249558282,
+        "win_rate": 0.5,
+        "total_trades": 2,
+        "total_pnl": 19.05270499116564
+      },
+      "9": {
+        "avg_pnl": -10.758650377884663,
+        "win_rate": 0.0,
+        "total_trades": 1,
+        "total_pnl": -10.758650377884663
+      },
+      "20": {
+        "avg_pnl": 23.504055799896648,
+        "win_rate": 1.0,
+        "total_trades": 2,
+        "total_pnl": 47.008111599793295
+      },
+      "19": {
+        "avg_pnl": -11.967108025583748,
+        "win_rate": 0.0,
+        "total_trades": 1,
+        "total_pnl": -11.967108025583748
+      },
+      "8": {
+        "avg_pnl": 29.010127926850604,
+        "win_rate": 1.0,
+        "total_trades": 1,
+        "total_pnl": 29.010127926850604
+      },
+      "10": {
+        "avg_pnl": 25.67189436981406,
+        "win_rate": 1.0,
+        "total_trades": 1,
+        "total_pnl": 25.67189436981406
+      },
+      "22": {
+        "avg_pnl": 8.105464938538573,
+        "win_rate": 0.6666666666666666,
+        "total_trades": 3,
+        "total_pnl": 24.316394815615716
+      },
+      "4": {
+        "avg_pnl": -8.871269878514314,
+        "win_rate": 0.25,
+        "total_trades": 4,
+        "total_pnl": -35.485079514057254
+      },
+      "1": {
+        "avg_pnl": -30.820524117787897,
+        "win_rate": 0.0,
+        "total_trades": 1,
+        "total_pnl": -30.820524117787897
+      },
+      "0": {
+        "avg_pnl": 23.02339492961768,
+        "win_rate": 1.0,
+        "total_trades": 2,
+        "total_pnl": 46.04678985923536
+      },
+      "2": {
+        "avg_pnl": 22.405512492355825,
+        "win_rate": 1.0,
+        "total_trades": 2,
+        "total_pnl": 44.81102498471165
+      },
+      "5": {
+        "avg_pnl": 12.138553098123504,
+        "win_rate": 1.0,
+        "total_trades": 1,
+        "total_pnl": 12.138553098123504
+      },
+      "7": {
+        "avg_pnl": 18.765408269260803,
+        "win_rate": 0.5,
+        "total_trades": 2,
+        "total_pnl": 37.530816538521606
+      },
+      "18": {
+        "avg_pnl": 15.115925115444195,
+        "win_rate": 1.0,
+        "total_trades": 1,
+        "total_pnl": 15.115925115444195
+      },
+      "15": {
+        "avg_pnl": 26.80414181857092,
+        "win_rate": 1.0,
+        "total_trades": 2,
+        "total_pnl": 53.60828363714184
+      },
+      "16": {
+        "avg_pnl": -16.268701553242668,
+        "win_rate": 0.0,
+        "total_trades": 1,
+        "total_pnl": -16.268701553242668
+      }
+    },
+    "confidence_quartiles": {
+      "Q1": {
+        "avg_pnl": -3.0947682342398988,
+        "win_rate": 0.375,
+        "avg_confidence": -0.0536900590650308,
+        "trades": 8
+      },
+      "Q2": {
+        "avg_pnl": 1.4980246804986161,
+        "win_rate": 0.5,
+        "avg_confidence": 0.17974518339077533,
+        "trades": 8
+      },
+      "Q3": {
+        "avg_pnl": 12.511765392984508,
+        "win_rate": 0.625,
+        "avg_confidence": 0.21796038567336878,
+        "trades": 8
+      },
+      "Q4": {
+        "avg_pnl": 8.895681782848731,
+        "win_rate": 0.625,
+        "avg_confidence": 0.30244633188680803,
+        "trades": 8
+      }
+    }
+  },
+  "threshold_sensitivity": [
+    {
+      "threshold": 0.3,
+      "total_signals": 3446,
+      "long_signals": 1216,
+      "short_signals": 2230,
+      "signal_ratio": 0.23315290933694183,
+      "accuracy": 0.558254397834912
+    },
+    {
+      "threshold": 0.35,
+      "total_signals": 3850,
+      "long_signals": 1137,
+      "short_signals": 2713,
+      "signal_ratio": 0.2604871447902571,
+      "accuracy": 0.5632611637347767
+    },
+    {
+      "threshold": 0.39999999999999997,
+      "total_signals": 3757,
+      "long_signals": 1100,
+      "short_signals": 2657,
+      "signal_ratio": 0.25419485791610286,
+      "accuracy": 0.5972936400541272
+    },
+    {
+      "threshold": 0.44999999999999996,
+      "total_signals": 2932,
+      "long_signals": 1005,
+      "short_signals": 1927,
+      "signal_ratio": 0.1983761840324763,
+      "accuracy": 0.6425575101488498
+    },
+    {
+      "threshold": 0.49999999999999994,
+      "total_signals": 2018,
+      "long_signals": 651,
+      "short_signals": 1367,
+      "signal_ratio": 0.13653585926928283,
+      "accuracy": 0.6815290933694181
+    },
+    {
+      "threshold": 0.5499999999999999,
+      "total_signals": 1449,
+      "long_signals": 649,
+      "short_signals": 800,
+      "signal_ratio": 0.09803788903924222,
+      "accuracy": 0.7058186738836265
+    },
+    {
+      "threshold": 0.5999999999999999,
+      "total_signals": 757,
+      "long_signals": 476,
+      "short_signals": 281,
+      "signal_ratio": 0.05121786197564276,
+      "accuracy": 0.715426251691475
+    },
+    {
+      "threshold": 0.6499999999999999,
+      "total_signals": 195,
+      "long_signals": 164,
+      "short_signals": 31,
+      "signal_ratio": 0.013193504736129905,
+      "accuracy": 0.7167794316644114
+    },
+    {
+      "threshold": 0.7,
+      "total_signals": 38,
+      "long_signals": 33,
+      "short_signals": 5,
+      "signal_ratio": 0.002571041948579161,
+      "accuracy": 0.714276048714479
+    },
+    {
+      "threshold": 0.7499999999999999,
+      "total_signals": 1,
+      "long_signals": 1,
+      "short_signals": 0,
+      "signal_ratio": 6.765899864682003e-05,
+      "accuracy": 0.7128552097428958
+    },
+    {
+      "threshold": 0.7999999999999998,
+      "total_signals": 0,
+      "long_signals": 0,
+      "short_signals": 0,
+      "signal_ratio": 0.0,
+      "accuracy": 0.7127875507442489
+    }
+  ],
+  "best_params": {
+    "n_estimators": 156,
+    "max_depth": 12,
+    "min_samples_split": 36,
+    "min_samples_leaf": 13,
+    "thr_long": 0.6054605832743551,
+    "thr_short": 0.6465830741024235,
+    "min_confidence": 0.168090584857769,
+    "stop_mult": 0.83814337326277,
+    "take_mult": 1.344451182256218,
+    "trailing_mult": 0.7888796863254809,
+    "breakeven_mult": 0.4318970898740121
+  },
+  "config": {
+    "session_config": {
+      "prebuffer_min": 45,
+      "session_len_min": 45,
+      "volatility_window": 10,
+      "zscore_window_days": 3,
+      "volatility_threshold": 1.8,
+      "cooldown_min": 30
+    },
+    "sim_config": {
+      "commission": 0.001,
+      "spread_pct": 0.0002,
+      "risk_per_trade": 0.2,
+      "max_position_pct": 0.5,
+      "default_stop_pct": 0.005,
+      "default_take_pct": 0.015,
+      "max_hold_minutes": 30,
+      "min_hold_bars": 3
+    }
+  }
+}

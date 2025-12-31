@@ -1,0 +1,32 @@
+{
+  "horizon": 30,
+  "metrics": {
+    "accuracy": 0.49286940012413744,
+    "precision": 0.4918396343434495,
+    "recall": 0.9724575641368649,
+    "f1": 0.6532733563322832,
+    "roc_auc": 0.504044229955255
+  },
+  "pnl": -39.481390255494475,
+  "sharpe": 5.617803766555628,
+  "max_drawdown": 45.538629279098934,
+  "trades": {
+    "total_trades": 2245,
+    "winning_trades": 1117,
+    "losing_trades": 1128,
+    "win_rate": 0.49755011135857463,
+    "avg_win_pct": 0.0032347189799202787,
+    "avg_loss_pct": -0.003474129682688699,
+    "profit_factor": 0.20767678706426032,
+    "largest_win_pct": 0.021188414190996818,
+    "largest_loss_pct": -0.017349855980669293,
+    "avg_holding_minutes": 24.38354939651319
+  },
+  "best_params": {
+    "n_estimators": 124,
+    "max_depth": 10,
+    "min_samples_split": 15,
+    "min_samples_leaf": 22,
+    "threshold": 0.44014620286694567
+  }
+}
