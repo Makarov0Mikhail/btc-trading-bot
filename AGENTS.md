@@ -1,30 +1,30 @@
 # AGENTS.md
 
-Guide for agentic coding tools working in `C:\Users\PCC\Desktop\steps_actu`.
+Руководство для агентных инструментов, работающих в `C:\Users\PCC\Desktop\steps_actu`.
 
-## Scope and precedence
+## Область действия и приоритет
 
-- Applies to the whole repository.
-- Follow user instructions first, then this file.
-- Keep edits focused and avoid unrelated refactors.
+- Применяется ко всему репозиторию.
+- Сначала выполнять явные инструкции пользователя, затем правила из этого файла.
+- Делать точечные изменения без лишнего рефакторинга.
 
-## Project reality (important)
+## Реальное устройство проекта
 
-- Python script-based repo; no package build system.
-- Main runtime: `live_trading_bot.py`.
-- Core ML/trading modules are in `src/`.
-- Root `test_*.py` files are script-style tests with `main()`, not pytest unit tests.
-- Typical environment is `btc_trading_env` virtualenv.
+- Репозиторий скриптовый, на Python, без пакетной системы сборки.
+- Основной рантайм: `live_trading_bot.py`.
+- Ключевая торговая/ML-логика находится в `src/`.
+- Файлы `test_*.py` в корне — это скрипты с `main()`, а не unit-тесты pytest.
+- Обычно используется виртуальное окружение `btc_trading_env`.
 
-## Cursor/Copilot rule files
+## Правила Cursor/Copilot
 
-- Checked for `.cursorrules`, `.cursor/rules/`, and `.github/copilot-instructions.md`.
-- None were found during analysis.
-- If added later, treat them as required and update this document.
+- Проверены пути `.cursorrules`, `.cursor/rules/`, `.github/copilot-instructions.md`.
+- На момент анализа такие файлы не найдены.
+- Если появятся, считать их обязательными и обновить этот документ.
 
-## Environment setup
+## Подготовка окружения
 
-Run from repo root:
+Запускать из корня репозитория:
 
 ```bash
 python -m venv btc_trading_env
@@ -32,131 +32,131 @@ btc_trading_env\Scripts\activate
 pip install -r requirements.txt
 ```
 
-## Build / lint / test commands
+## Команды build / lint / test
 
-There is no formal build command (`pyproject.toml`, `setup.py`, `Makefile`, CI pipeline not present in root).
+Формального build-пайплайна нет (`pyproject.toml`, `setup.py`, `Makefile`, CI-конфиг в корне отсутствуют).
 
-### Build-equivalent checks
+### Эквивалент сборки
 
 ```bash
 python -m compileall src
 python -m compileall .
 ```
 
-### Lint/format checks
+### Линт и форматирование
 
-No committed lint config. Use safe syntax checks:
+Конфигов линтера в репозитории нет. Для безопасной проверки использовать:
 
 ```bash
 python -m py_compile src\*.py
 python -m py_compile *.py
 ```
 
-If you add Ruff/Black/Mypy locally, do not do a repo-wide reformat unless explicitly requested.
+Если локально добавлены Ruff/Black/Mypy, не делать массовый рефакторинг без запроса пользователя.
 
-### Tests
+### Тесты
 
-Run one test script (preferred single-test workflow):
+Запуск одного тестового скрипта (предпочтительный single-test сценарий):
 
 ```bash
 python test_realtime_720d.py
 ```
 
-Run any specific test script:
+Запуск конкретного тест-скрипта:
 
 ```bash
 python test_short_only.py
 ```
 
-Run all root test scripts (PowerShell):
+Запуск всех root-скриптов `test_*.py` (PowerShell):
 
 ```powershell
 Get-ChildItem test_*.py | ForEach-Object { python $_.FullName }
 ```
 
-Single-test note:
+Примечание по single test:
 
-- Current repo does not expose pytest-style `::test_name` targets.
-- If pytest tests are added later, use `python -m pytest path/to/file.py::test_name`.
+- Сейчас нет pytest-целей вида `::test_name`.
+- Если pytest-тесты появятся, использовать `python -m pytest path/to/file.py::test_name`.
 
-## Code style conventions
+## Соглашения по стилю кода
 
-Follow local file style and nearby patterns before external opinions.
+Сначала ориентироваться на стиль текущего файла и соседнего кода.
 
-### Imports
+### Импорты
 
-- Order: stdlib, third-party, local imports.
-- Prefer explicit imports; avoid wildcard imports.
-- Keep imports stable and minimal when editing existing files.
-- Avoid introducing new `sys.path.insert(...)` hacks unless unavoidable.
+- Порядок: стандартная библиотека, сторонние зависимости, локальные модули.
+- Предпочитать явные импорты, не использовать `import *`.
+- Минимизировать изменения импортов в нетронутых участках.
+- Не добавлять новые `sys.path.insert(...)`, если можно обойтись без них.
 
-### Formatting
+### Форматирование
 
-- Preserve existing formatting style in each file.
-- Do not submit formatting-only churn unless requested.
-- Keep comments short and useful for non-obvious trading/math logic.
+- Сохранять текущий стиль форматирования в конкретном файле.
+- Не делать форматирование ради форматирования.
+- Комментарии писать только там, где логика неочевидна (особенно торговая/математическая).
 
-### Types
+### Типизация
 
-- Add type hints for new or changed functions where practical.
-- Continue existing use of `dataclass` and `typing` aliases.
-- Prefer concrete annotations in signatures (`pd.DataFrame`, `pd.Series`, `Dict[str, Any]`).
-- Do not enforce strict typing migration across untouched code.
+- Для новых и изменяемых функций по возможности добавлять аннотации типов.
+- Продолжать текущий подход с `dataclass` и `typing`.
+- В сигнатурах предпочитать конкретные типы (`pd.DataFrame`, `pd.Series`, `Dict[str, Any]`).
+- Не запускать тотальную миграцию на строгую типизацию без запроса.
 
-### Naming
+### Именование
 
-- `snake_case` for functions/variables.
-- `PascalCase` for classes.
-- `UPPER_SNAKE_CASE` for constants/config blocks.
-- Reuse domain vocabulary consistently: `session`, `horizon`, `target`, `proba`, `thr_short`, `thr_long`.
+- `snake_case` для функций и переменных.
+- `PascalCase` для классов.
+- `UPPER_SNAKE_CASE` для констант и конфигов.
+- Использовать устойчивые доменные имена: `session`, `horizon`, `target`, `proba`, `thr_short`, `thr_long`.
 
-### Data and ML safety
+### Безопасность данных и ML-логики
 
-- Keep time index sorted before rolling/shift operations.
-- Avoid look-ahead leakage; favor lagged/shifted predictors.
-- Respect session boundaries when creating targets/signals.
-- Handle `NaN`/`inf` explicitly before model inference.
+- Сортировать временной индекс перед `rolling`/`shift`.
+- Не допускать look-ahead leakage, использовать лагированные признаки.
+- Учитывать границы сессий при расчете таргетов и сигналов.
+- Явно обрабатывать `NaN`/`inf` перед инференсом модели.
 
-### Error handling and logging
+### Ошибки и логирование
 
-- Raise clear exceptions for missing data/models.
-- Guard exchange/network calls with `try/except` and useful logs.
-- Log actionable context (symbol, time, thresholds, exit reasons).
-- Avoid silent failures.
+- Для отсутствующих данных/моделей выбрасывать понятные исключения.
+- Сетевые и биржевые вызовы оборачивать в `try/except`.
+- Логировать полезный контекст: символ, время, пороги, причина выхода.
+- Не допускать тихого падения логики.
 
-### Secrets and credentials
+### Секреты и учетные данные
 
-- Never hardcode real API keys/tokens.
-- Prefer environment variables for credentials.
-- Do not commit `.env` or credential dumps.
-- `start_bot.bat` currently contains key-like values; treat as sensitive and do not replicate.
+- Не хардкодить реальные API-ключи и токены.
+- Использовать переменные окружения.
+- Не коммитить `.env` и дампы секретов.
+- В `start_bot.bat` есть значения, похожие на ключи; считать их чувствительными и не тиражировать.
 
-## Testing expectations for code changes
+## Ожидания по проверкам
 
-- Run at least one relevant `test_*.py` script for any behavior change.
-- For live trading logic, validate via offline/backtest scripts first.
-- In handoff notes, include commands run and short result summary.
+- Для изменения поведения запускать хотя бы один релевантный `test_*.py`.
+- Для live-логики сначала проверять офлайн/бэктест скриптами.
+- В отчете указывать команды и короткий результат.
 
-## Change management
+## Управление изменениями
 
-- Keep diffs small and localized.
-- Prefer modifying existing modules over introducing duplicates.
-- Update docs/comments when behavior changes materially.
-- If adding new tooling, document exact commands in this file.
+- Держать диффы компактными и локальными.
+- Предпочитать доработку существующих модулей, а не дубли.
+- Обновлять документацию при значимых изменениях поведения.
+- При добавлении новых инструментов указывать команды в этом файле.
 
-## Git policy (owner-approved)
+## Git-политика (подтверждена владельцем)
 
-- Repository owner allows autonomous commits without additional confirmation.
-- Push target: `main` branch directly.
-- Commit only significant changes: logic updates that materially affect behavior/results.
-- Do not commit minor cosmetic edits (small text tweaks, trivial formatting, non-functional micro-fixes).
-- Pre-commit test/lint execution is optional unless the current task explicitly requires it.
-- Keep baseline security rules: never commit secrets (`.env`, tokens, API keys, credential dumps).
-- If a change mixes significant and minor edits, split/stage only the significant part when practical.
+- Разрешены автономные коммиты без дополнительного подтверждения.
+- Пуш выполнять напрямую в ветку `main`.
+- Коммитить только значимые изменения: заметные правки логики и результата.
+- Не коммитить мелкие косметические правки и микроправки без влияния на поведение.
+- Предкоммитные проверки можно не запускать, если это не требуется текущей задачей.
+- Соблюдать базовую безопасность: не коммитить секреты (`.env`, токены, ключи, дампы).
+- Если в одном наборе есть значимые и мелкие изменения, по возможности коммитить только значимую часть.
 
-## Pre-handoff checklist
+## Чек-лист перед передачей
 
-- `python -m compileall src` passes.
-- Relevant test script(s) executed.
-- No secrets added.
-- Output paths remain consistent with repo conventions (`data/`, `models/`, `results/`, `logs/`).
+- `python -m compileall src` проходит.
+- Запущен хотя бы один релевантный тестовый скрипт.
+- Секреты не добавлены.
+- Пути вывода согласованы с проектом (`data/`, `models/`, `results/`, `logs/`).
