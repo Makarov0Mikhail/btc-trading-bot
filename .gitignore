@@ -36,3 +36,7 @@ secrets.json
 
 # Models (опционально, если большие)
 # models/
+# Large model artifacts
+models/*.pkl
+!models/.gitkeep
+
